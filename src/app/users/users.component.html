@@ -1,0 +1,11 @@
+<p>
+  {{ message || "No Message yet." }}
+</p>
+
+<ul class="lsit-group">
+  <app-user
+    *ngFor="let currentUser of users"
+    [user]="currentUser"
+    (messageEvent)="receiveMessage($event)"
+  ></app-user>
+</ul>
